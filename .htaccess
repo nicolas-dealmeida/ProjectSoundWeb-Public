@@ -1,0 +1,35 @@
+#
+#   Protége les .htaccess et .htpasswds.
+<Files ~ "^.*\.([Hh][Tt][AaPp])">
+order allow,deny
+deny from all
+satisfy all
+</Files>
+#
+#
+#   Désactive l'affichage des répertoires.
+Options All -Indexes
+#
+#
+#   Encodage par défaut des fichiers.
+AddDefaultCharset UTF-8
+#
+#
+#   Définition de l'index.
+DirectoryIndex Accueil.php
+#
+#
+#   Activations des Redirections/Réécritures Originels.
+RewriteEngine On
+#
+#   Réécritures.
+RewriteRule Accueil \Accueil.php
+RewriteRule Compte \Compte.php
+RewriteRule Liste-Utilisateur \Liste-Utilisateur.php
+RewriteRule Musiques \Musiques.php
+RewriteRule Panel-Admin \Panel-Admin.php
+RewriteRule Panel-Modérateur \Panel-Moderateur.php
+RewriteRule Panel-Utilisateur \Panel-Utilisateur.php
+RewriteRule Sons-Divers \Sons-Divers.php
+RewriteRule Voix \Voix.php
+RewriteRule News \News.php
